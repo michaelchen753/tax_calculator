@@ -1,0 +1,20 @@
+.pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: cornflowerblue;
+    border-radius: 5px;
+    height:90%;
+    margin-left:.8rem;
+    text-align: center;
+    h1{
+        font-size:50px;
+        padding:0;
+    }
+    p{
+        text-align: left;
+        float: left;
+        padding:0 2rem;
+    }
+}
+

@@ -1,0 +1,17 @@
+.home {
+    width:70%;
+    height:70vh;
+    max-width: 900px;
+    margin:2rem auto;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 9px;
+};
+
+.home__pic,
+.home__cal {
+    display: flex;
+    align-items: center;
+    width:45%;
+}

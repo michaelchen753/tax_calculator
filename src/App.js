@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { StateMachineProvider, createStore } from "little-state-machine";
+import Home from './pages/Home/Home';
+import Result from './pages/Result/Result';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
+
+
+
+createStore({
+  data: {
+    country: '',
+    year: '',
+    income: null
+  }
+});
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StateMachineProvider>
+        <Switch>
+          <Route exact path='/' component= { Home } />
+          <Route exact path='/result' component= { Result } />      
+        </Switch>
+      </StateMachineProvider>      
     </div>
   );
 }

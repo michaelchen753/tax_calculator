@@ -1,0 +1,16 @@
+.result {
+    display:flex;
+    justify-content: space-between;    
+    width:70%;
+    max-width: 900px;
+    margin:2rem auto;
+    background: white;
+    border-radius: 9px;
+    height:70vh;
+}
+
+
+.info__container,
+.breakdown__container {
+    width:45%;
+}

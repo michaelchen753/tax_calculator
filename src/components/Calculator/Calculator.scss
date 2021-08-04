@@ -1,0 +1,39 @@
+.cal{ 
+    display: flex;
+    flex-direction: column;
+    .cal__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h5{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        border:solid 3px cornflowerblue;
+        height:30px;
+    }
+    label{
+        font-size: 12px;
+       text-align: left;
+       float:left;
+    }
+    select{
+        margin-bottom: .5rem;
+        height:30px;
+    }
+    input{        
+
+        height:25px;
+        ::before {
+            content:'$';
+        }
+    }
+    .cal__submit {
+        border-radius: 4px;
+        border:none;
+        background: cornflowerblue;
+        margin-top:1rem;
+    }
+}
