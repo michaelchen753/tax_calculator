@@ -1,12 +1,15 @@
 .home {
     width:70%;
     height:70vh;
-    max-width: 900px;
+    max-height: 450px;
+    max-width: 700px;
     margin:2rem auto;
     background: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border-radius: 9px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
 };
 
 .home__pic,
@@ -14,4 +17,5 @@
     display: flex;
     align-items: center;
     width:45%;
+    margin-right: 0;
 }

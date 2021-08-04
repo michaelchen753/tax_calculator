@@ -39,7 +39,8 @@ import "./Calculator.scss";
           
           <label>Enter your total taxable income for the income year *:</label>         
           <input type="number" placeholder ='$ Amount' step = '1' min='0' {...register("income",{required:true})} />
-          {errors.income && errors.income.type === "required" && <span>This is required</span>}          
+          {errors.income && errors.income.type === "required" && <span>This is required</span>} 
+                   
           <input className='cal__submit' type="submit" value="Calculate"/>
         </form>
       </div>

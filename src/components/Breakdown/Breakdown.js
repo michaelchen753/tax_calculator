@@ -27,8 +27,7 @@ export default function Breakdown(props) {
             setLevel2(5092); 
             setLevel3((number-45000) *0.325); 
             setLevel4(0);
-            setLevel5(0);      
-           
+            setLevel5(0);
            }else if(number >=18201) {
             setLevel2((number-18000) *0.19); 
             setLevel3(0); 
@@ -46,7 +45,7 @@ export default function Breakdown(props) {
     return (
         <main className='breakdown'>
             <article>
-                <h4>Your estimated taxable income is:</h4>
+                <h5>Your estimated taxable income is:</h5>
                 <h2>${total}</h2>
                 <p className='breakdown__title'>Breakdown</p>
                 <div className='breakdown__1'>

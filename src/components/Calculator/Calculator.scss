@@ -16,15 +16,14 @@
     }
     label{
         font-size: 12px;
-       text-align: left;
-       float:left;
+        text-align: left;
+        float:left;
     }
     select{
         margin-bottom: .5rem;
         height:30px;
     }
-    input{        
-
+    input{
         height:25px;
         ::before {
             content:'$';
@@ -35,5 +34,6 @@
         border:none;
         background: cornflowerblue;
         margin-top:1rem;
+        cursor: pointer;
     }
 }
