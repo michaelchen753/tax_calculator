@@ -6,9 +6,9 @@ import updateAction from "./updateAction";
 
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
-import "./Calculator.scss";
+import "./Form.scss";
 
- function Calculator(props) {
+ function Form(props) {
   const { register, handleSubmit, formState: { errors }} = useForm();
   const { actions } = useStateMachine({ updateAction });
   const onSubmit = data => {
@@ -47,4 +47,4 @@ import "./Calculator.scss";
   
   );
 }
-export default withRouter(Calculator);
+export default withRouter(Form);

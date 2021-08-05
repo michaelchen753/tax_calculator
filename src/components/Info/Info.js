@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStateMachine } from 'little-state-machine';
-import updateAction from '../Calculator/updateAction';
+import updateAction from '../Form/updateAction';
 import './Info.scss';
 
 export default function Info(props) {
