@@ -21,18 +21,12 @@ export default function Breakdown(props) {
            }else if(number >=120001) {
             setLevel2(5092); 
             setLevel3(29467); 
-            setLevel4((number-120000) *0.37);
-            setLevel5(0);            
+            setLevel4((number-120000) *0.37);     
            }else if(number >=45001) {
             setLevel2(5092); 
-            setLevel3((number-45000) *0.325); 
-            setLevel4(0);
-            setLevel5(0);
+            setLevel3((number-45000) *0.325);
            }else if(number >=18201) {
-            setLevel2((number-18000) *0.19); 
-            setLevel3(0); 
-            setLevel4(0);
-            setLevel5(0);             
+            setLevel2((number-18000) *0.19);          
            } else {
              return  0;
            }       
