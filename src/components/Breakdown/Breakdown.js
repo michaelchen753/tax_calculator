@@ -2,10 +2,9 @@ import React, {useState, useEffect } from 'react'
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../Form/updateAction";
 import './Breakdown.scss';
-export default function Breakdown(props) {
-    const { state } = useStateMachine(updateAction);
-    const income = state.income;    
-    
+export default function Breakdown() {
+
+    const { state } = useStateMachine(updateAction);    
     const level1 = 0;    
     const [level2, setLevel2]= useState(0);
     const [level3, setLevel3]= useState(0);
@@ -13,28 +12,28 @@ export default function Breakdown(props) {
     const [level5, setLevel5]= useState(0);
     const total = level1 + level2 + level3 + level4 + level5;
     const taxCalculatorBreakdown = (number)=>{
-            if(number >= 180001){
-            setLevel2(5092); 
-            setLevel3(29467); 
-            setLevel4(51667);
-            setLevel5((number - 180000)* 0.45);            
-           }else if(number >=120001) {
-            setLevel2(5092); 
-            setLevel3(29467); 
-            setLevel4((number-120000) *0.37);     
-           }else if(number >=45001) {
-            setLevel2(5092); 
-            setLevel3((number-45000) *0.325);
-           }else if(number >=18201) {
-            setLevel2((number-18000) *0.19);          
-           } else {
-             return  0;
-           }       
+        if(number >= 180001){
+        setLevel2(5092); 
+        setLevel3(29467); 
+        setLevel4(51667);
+        setLevel5((number - 180000)* 0.45);            
+        }else if(number >=120001) {
+        setLevel2(5092); 
+        setLevel3(29467); 
+        setLevel4((number-120000) *0.37);     
+        }else if(number >=45001) {
+        setLevel2(5092); 
+        setLevel3((number-45000) *0.325);
+        }else if(number >=18201) {
+        setLevel2((number-18000) *0.19);          
+        } else {
+            return  0;
+        }       
     };
 
     useEffect(()=>{
-        taxCalculatorBreakdown(income);
-    }, [income])
+        taxCalculatorBreakdown(state.income);
+    }, [state])
     
     return (
         <main className='breakdown'>
